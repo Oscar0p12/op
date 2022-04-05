@@ -1,7 +1,11 @@
-const express= require('express')
+const http=require('http')
+const express=require('express')
+const cors= require('cors')
 
+//Crear el servidor
 const app=express()
+const {Server, Socket}=require('socket.io')
 
-app.listen(4000,()=>{
-    console.log('Servidor en el puerto')
-})
+const fs=require('fs')
+const archivo='../archivo.txt'
+const datos='datos.txt'
